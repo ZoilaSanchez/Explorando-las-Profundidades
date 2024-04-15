@@ -1,0 +1,11 @@
+{
+  "name": "explorando-las-profundidades",
+  "version": "1.0.0",
+  "description": "project that help showing how wonderful is our ocean",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fernando, Kelvin y Zoila",
+  "license": "ISC"
+}
