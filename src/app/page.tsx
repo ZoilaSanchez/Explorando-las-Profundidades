@@ -1,113 +1,55 @@
+"use client"
 import Image from "next/image";
+import Umbrella from '@img/Umbrella.svg';
+import Island from '@img/island.svg';
+import Island2 from '@img/Island-state-2.svg';
+import { useState, useEffect } from 'react';
+
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+  const [showSecondImage, setShowSecondImage] = useState(false);
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSecondImage(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+  return (
+    <div className="h-[100vh]">
+      <header>
+        <ul>
+          <li>Inicio</li>
+          <li style={{ fill: 'color(display-p3 0.1119 0.634 0.8667)' }}><svg xmlns="http://www.w3.org/2000/svg" width="94" height="40" viewBox="0 0 94 40">
+            <path d="M0 1.65951 C0 1.21443 0.145973 0.826578 0.437918 0.495947 C0.742556 0.165316 1.16143 0 1.69455 0 L7.7302 0 C12.7567 0 16.5393 1.24622 19.078 3.73867 C21.4897 6.12939 22.6956 9.54379 22.6956 13.9819 C22.6956 18.7252 21.3374 22.4575 18.621 25.1788 C15.9174 27.8875 12.1728 29.2418 7.38748 29.2418 L1.69455 29.2418 C1.16143 29.2418 0.742556 29.0765 0.437918 28.7458 C0.145973 28.4025 0 28.0083 0 27.5632 L0 1.65951 Z M8.3014 4.19647 L7.3494 4.19647 C6.93052 4.19647 6.07373 4.21555 4.77902 4.2537 L4.77902 25.0262 L7.88252 25.0835 L7.99676 25.0835 C12.9091 25.0835 15.9301 22.9598 17.0598 18.7124 C17.4279 17.3391 17.6119 15.8194 17.6119 14.1536 C17.6119 12.475 17.4088 11.0316 17.0026 9.82356 C16.6091 8.60277 16.0189 7.57272 15.2319 6.73343 C13.6453 5.04212 11.3351 4.19647 8.3014 4.19647 Z" fill="29,162,221" fillRule="nonzero" />
+            <path d="M31.3778 19.5327 L31.3587 19.8951 C31.3587 21.6373 31.9109 23.0361 33.0152 24.0916 C34.1703 25.2106 35.7379 25.7701 37.718 25.7701 C39.5205 25.7701 41.196 25.2297 42.7446 24.1488 C43.0365 23.9453 43.2967 23.8436 43.5252 23.8436 C43.9949 23.8436 44.3503 24.0788 44.5915 24.5494 L45.1055 25.6175 C45.2198 25.8719 45.2769 26.1453 45.2769 26.4378 C45.2769 26.7302 45.1436 27.0354 44.8771 27.3534 C44.6232 27.6586 44.2868 27.9383 43.8679 28.1927 C43.4491 28.447 42.9604 28.6695 42.4019 28.8603 C41.8561 29.051 41.2912 29.21 40.7073 29.3371 C39.5395 29.5915 38.321 29.7186 37.0517 29.7186 C35.7823 29.7186 34.5003 29.477 33.2056 28.9938 C31.9236 28.5106 30.8129 27.8048 29.8736 26.8765 C27.8554 24.9054 26.8463 22.2413 26.8463 18.8841 C26.8463 12.9963 28.9153 9.33397 33.0533 7.897 C34.348 7.45192 35.6744 7.22938 37.0326 7.22938 C38.4035 7.22938 39.5649 7.37562 40.5169 7.6681 C41.4816 7.96058 42.313 8.39294 43.0111 8.96519 C44.4836 10.1733 45.2198 11.8582 45.2198 14.02 C45.2198 16.1437 44.3566 17.7651 42.6303 18.8841 C41.1198 19.8633 39.127 20.3529 36.6518 20.3529 C35.1286 20.3529 33.3706 20.0795 31.3778 19.5327 Z M40.7454 13.9628 C40.7454 12.1443 39.5268 11.2351 37.0897 11.2351 C34.7669 11.2351 33.1421 12.0871 32.2155 13.7911 C31.8855 14.3888 31.6697 15.1264 31.5682 16.0038 C32.6598 16.5506 34.0497 16.824 35.7379 16.824 C39.0762 16.824 40.7454 15.8703 40.7454 13.9628 Z" fill="" fillRule="nonzero" />
+            <path d="M54.1495 19.5327 L54.1304 19.8951 C54.1304 21.6373 54.6826 23.0361 55.7869 24.0916 C56.942 25.2106 58.5096 25.7701 60.4898 25.7701 C62.2922 25.7701 63.9677 25.2297 65.5163 24.1488 C65.8083 23.9453 66.0685 23.8436 66.2969 23.8436 C66.7666 23.8436 67.122 24.0788 67.3632 24.5494 L67.8773 25.6175 C67.9915 25.8719 68.0486 26.1453 68.0486 26.4378 C68.0486 26.7302 67.9153 27.0354 67.6488 27.3534 C67.3949 27.6586 67.0585 27.9383 66.6397 28.1927 C66.2208 28.447 65.7321 28.6695 65.1736 28.8603 C64.6278 29.051 64.0629 29.21 63.479 29.3371 C62.3113 29.5915 61.0927 29.7186 59.8234 29.7186 C58.5541 29.7186 57.272 29.477 55.9773 28.9938 C54.6953 28.5106 53.5846 27.8048 52.6453 26.8765 C50.6271 24.9054 49.618 22.2413 49.618 18.8841 C49.618 12.9963 51.687 9.33397 55.825 7.897 C57.1197 7.45192 58.4462 7.22938 59.8043 7.22938 C61.1752 7.22938 62.3366 7.37562 63.2886 7.6681 C64.2533 7.96058 65.0847 8.39294 65.7829 8.96519 C67.2553 10.1733 67.9915 11.8582 67.9915 14.02 C67.9915 16.1437 67.1284 17.7651 65.4021 18.8841 C63.8916 19.8633 61.8987 20.3529 59.4235 20.3529 C57.9003 20.3529 56.1423 20.0795 54.1495 19.5327 Z M63.5171 13.9628 C63.5171 12.1443 62.2986 11.2351 59.8615 11.2351 C57.5386 11.2351 55.9138 12.0871 54.9872 13.7911 C54.6572 14.3888 54.4414 15.1264 54.3399 16.0038 C55.4315 16.5506 56.8214 16.824 58.5096 16.824 C61.8479 16.824 63.5171 15.8703 63.5171 13.9628 Z" fill="" fillRule="nonzero" />
+            <path d="M78.4825 25.9418 C78.6094 27.2135 78.6729 28.8031 78.6729 30.7105 L78.6729 38.5885 C78.6729 39.5295 78.2984 40 77.5495 40 L75.1886 40 C74.3889 40 73.9891 39.5041 73.9891 38.5122 L73.9891 17.3963 C73.9891 13.8229 73.7987 11.216 73.4179 9.57558 C73.3798 9.41027 73.3607 9.18137 73.3607 8.88889 C73.3607 8.59641 73.475 8.32936 73.7035 8.08774 C73.9446 7.84613 74.2493 7.72532 74.6174 7.72532 L75.7788 7.72532 C76.4769 7.72532 76.972 8.03052 77.2639 8.64091 C77.6066 9.35304 77.8669 10.275 78.0446 11.4068 C78.9331 9.85535 80.1453 8.72357 81.6812 8.01145 C82.7728 7.50278 84.0104 7.24845 85.394 7.24845 C86.7902 7.24845 88.0342 7.52186 89.1258 8.06867 C90.2174 8.60277 91.125 9.34033 91.8485 10.2814 C93.2828 12.1507 94 14.6559 94 17.7969 C94 21.0777 93.194 23.8499 91.5819 26.1135 C89.881 28.5169 87.6534 29.7186 84.8989 29.7186 C82.0303 29.7186 79.8914 28.4597 78.4825 25.9418 Z M78.235 19.1702 C78.235 21.0014 78.8442 22.5783 80.0628 23.9008 C81.2179 25.147 82.5253 25.7701 83.985 25.7701 C85.8255 25.7701 87.1901 24.8736 88.0786 23.0806 C88.7894 21.6563 89.1448 19.8569 89.1448 17.6824 C89.1448 15.9275 88.7259 14.4397 87.8882 13.2189 C86.987 11.8964 85.7875 11.2351 84.2896 11.2351 C82.6014 11.2351 81.1608 11.9345 79.9676 13.3333 C78.8125 14.7067 78.235 16.3027 78.235 18.1211 L78.235 19.1702 Z" fill="" fillRule="nonzero" />
+          </svg></li>
+          <li>Acerca de</li>
+        </ul>
+      </header>
+      <div className="h-[90%] flex justify-center items-center relative">
+        <Image src={Umbrella}
+          alt="Umbrella"
+          width={224}
+          height={224}
+          className="umbrella absolute"
+        />
+        <Image src={Island}
+          alt="Island"
+          width={536}
+          height={536}
+          className={`island ${showSecondImage ? 'hide' : ''}`}
+        />
+        <Image src={Island2}
+          alt="Island"
+          width={536}
+          height={536}
+          className={`island ${showSecondImage ? '' : 'hide'}`}
         />
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
