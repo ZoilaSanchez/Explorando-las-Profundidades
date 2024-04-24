@@ -2,7 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.umbrella-shadow {
+  filter: drop-shadow(0px 6px 13px color(display-p3 0.498 0.4 0.0431 / 0.1))
+    drop-shadow(0px 23px 23px color(display-p3 0.498 0.4 0.0431 / 0.09))
+    drop-shadow(0px 51px 31px color(display-p3 0.498 0.4 0.0431 / 0.05))
+    drop-shadow(0px 91px 36px color(display-p3 0.498 0.4 0.0431 / 0.01))
+    drop-shadow(0px 142px 40px color(display-p3 0.498 0.4 0.0431 / 0));
+}
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -25,9 +38,4 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+ */
