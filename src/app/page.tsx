@@ -35,6 +35,16 @@ export default function Home() {
             <div className="absolute left-[692px] top-[296px] w-[296px] overflow-visible umbrella-shadow">
               <UmbrellaSvg />
             </div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 5 }}
+              className="absolute left-[25.1%] top-[29.5%] text-shadow"
+            >
+            <span className="text-with-border">Explorando lo<br/>profundo</span>
+            </motion.div>
+
           </div>
         </motion.div>
       </div>
