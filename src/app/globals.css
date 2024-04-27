@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+  font-family: "DM Sans"
+}
 
 @layer utilities {
   .text-balance {
@@ -9,11 +14,7 @@
 }
 
 .umbrella-shadow {
-  filter: drop-shadow(0px 6px 13px color(display-p3 0.498 0.4 0.0431 / 0.1))
-    drop-shadow(0px 23px 23px color(display-p3 0.498 0.4 0.0431 / 0.09))
-    drop-shadow(0px 51px 31px color(display-p3 0.498 0.4 0.0431 / 0.05))
-    drop-shadow(0px 91px 36px color(display-p3 0.498 0.4 0.0431 / 0.01))
-    drop-shadow(0px 142px 40px color(display-p3 0.498 0.4 0.0431 / 0));
+  filter: drop-shadow(0px 6px 13px color(display-p3 0.498 0.4 0.0431 / 0.1)) drop-shadow(0px 23px 23px color(display-p3 0.498 0.4 0.0431 / 0.09)) drop-shadow(0px 51px 31px color(display-p3 0.498 0.4 0.0431 / 0.05)) drop-shadow(0px 91px 36px color(display-p3 0.498 0.4 0.0431 / 0.01)) drop-shadow(0px 142px 40px color(display-p3 0.498 0.4 0.0431 / 0));
 }
 
 .text-shadow {
@@ -24,7 +25,7 @@
   line-height: 1.12;
   font-weight: lighter;
   opacity: 0.5;
-  mix-blend-mode: multiply; 
+  mix-blend-mode: multiply;
 }
 
 .text-with-border {
@@ -35,39 +36,32 @@
   line-height: 1.12;
   font-weight: bold;
   opacity: 0.5;
-  mix-blend-mode: multiply; 
-  border-color: #F8B23A; 
-  text-shadow : 
-    3px 3px 0px rgba(255, 255, 255, 0.5), 
-    -3px -3px 0px rgba(0, 0, 0, 0.1); 
+  mix-blend-mode: multiply;
+  border-color: #F8B23A;
+  text-shadow:
+    3px 3px 0px rgba(255, 255, 255, 0.5),
+    -3px -3px 0px rgba(0, 0, 0, 0.1);
 
 }
 
-
-/*  -webkit-text-stroke: 2px black; 
-/*mix-blend-mode: difference;  Hacer que el texto resalte en función del fondo */
-/* :root {
-  
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+li {
+  color: color(display-p3 0 0 0);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  padding-left: 34px;
+  padding-right: 34px;
+  margin-left: 40px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  height: 10%;
 }
- */
