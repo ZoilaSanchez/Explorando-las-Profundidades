@@ -17,11 +17,11 @@ export default function UmbrellaSvg(props: SVGProps<SVGSVGElement>) {
         id="umbrella"
         filter="url(#filter0_dddd_193_26)"
         animate={{
-         rotate: [0, 360],
+          rotate: [0, 360],
         }}
         transition={{
           times: [0, 1],
-          duration: 5,
+          duration: 6,
           repeat: Infinity,
           type: 'keyframes',
           ease: 'linear',
@@ -60,93 +60,6 @@ export default function UmbrellaSvg(props: SVGProps<SVGSVGElement>) {
           fill="#D0474F"
         />
       </motion.g>
-      {/* <defs>
-        <filter
-          id="filter0_dddd_193_26"
-          x="0"
-          y="0"
-          width="296"
-          height="358"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
-        >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dy="6" />
-          <feGaussianBlur stdDeviation="6.5" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0.498039 0 0 0 0 0.4 0 0 0 0 0.0431373 0 0 0 0.1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_193_26"
-          />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dy="23" />
-          <feGaussianBlur stdDeviation="11.5" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0.498039 0 0 0 0 0.4 0 0 0 0 0.0431373 0 0 0 0.09 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow_193_26"
-            result="effect2_dropShadow_193_26"
-          />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dy="51" />
-          <feGaussianBlur stdDeviation="15.5" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0.498039 0 0 0 0 0.4 0 0 0 0 0.0431373 0 0 0 0.05 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect2_dropShadow_193_26"
-            result="effect3_dropShadow_193_26"
-          />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dy="91" />
-          <feGaussianBlur stdDeviation="18" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0.498039 0 0 0 0 0.4 0 0 0 0 0.0431373 0 0 0 0.01 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect3_dropShadow_193_26"
-            result="effect4_dropShadow_193_26"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect4_dropShadow_193_26"
-            result="shape"
-          />
-        </filter>
-      </defs> */}
     </svg>
   )
 }
