@@ -24,7 +24,7 @@ export default function Home() {
         <motion.div
           className="relative overflow-hidden"
           initial={{ width: 536, height: 536, borderRadius: '50%' }}
-          animate={{ width: 1920, height: 1920, borderRadius: '50%' }}
+          animate={{ width: '100vw', height: '100vh', borderRadius: '0%' }}
           transition={{
             duration: 2,
             delay: 5,
@@ -41,7 +41,7 @@ export default function Home() {
               transform: 'translate(-50%, -50%)',
             }}
           >
-            <div className="w-[1920px]">
+            <div className="w-[100vw] h-[100vh] rounded-none">
               <BeachSvg />
             </div>
             <div className="absolute left-[692px] top-[296px] w-[296px] overflow-visible umbrella-shadow">
