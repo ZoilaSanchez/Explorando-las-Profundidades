@@ -1,33 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Capriola&display=swap');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+* {
+  font-family: "DM Sans"
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.umbrella-shadow {
+  filter: drop-shadow(0px 6px 13px color(display-p3 0.498 0.4 0.0431 / 0.1)) drop-shadow(0px 23px 23px color(display-p3 0.498 0.4 0.0431 / 0.09)) drop-shadow(0px 51px 31px color(display-p3 0.498 0.4 0.0431 / 0.05)) drop-shadow(0px 91px 36px color(display-p3 0.498 0.4 0.0431 / 0.01)) drop-shadow(0px 142px 40px color(display-p3 0.498 0.4 0.0431 / 0));
+}
+
+.text-shadow {
+  color: #000000;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 148px;
+  line-height: 1.12;
+  font-weight: lighter;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+}
+
+.text-with-border {
+  color: #F8B23A;
+  text-align: center;
+  font-family: "Capriola", sans-serif;
+  font-size: 148px;
+  line-height: 1.12;
+  font-weight: 400;
+  mix-blend-mode: screen;
+  border-color: #F8B23A;
+  opacity: 0.7;
+  text-shadow:
+    3px 3px 0px rgba(255, 255, 255, 0.5),
+    -3px -3px 0px rgba(0, 0, 0, 0.1);
+}
+
+li {
+  color: color(display-p3 0 0 0);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  height: 10%;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
 }
