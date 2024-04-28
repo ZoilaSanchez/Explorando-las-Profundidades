@@ -8,7 +8,7 @@ import UmbrellaSvg from './components/UmbrellaSvg'
 export default function Home() {
   return (
     <main className="flex min-h-screen items-center justify-center">
-      <div className="flex max-h-screen w-full items-center justify-center flex-col">
+      <div className="flex items-center justify-center flex-col relative h-[100vh] w-[100vw]">
         <header>
           <ul>
             <li>Inicio</li>

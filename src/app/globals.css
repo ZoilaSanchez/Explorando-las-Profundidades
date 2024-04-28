@@ -64,4 +64,7 @@ header {
   padding-top: 24px;
   padding-bottom: 24px;
   height: 10%;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
 }
