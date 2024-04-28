@@ -44,13 +44,13 @@ En **Explorando** **las** **profundidades** trabajamos con una estructura en bas
     `feature/landPage `
 
 ## 🐡​ Tecnologias y Herramientas
-    🪼 React 
-    🦭 Next 
-    🦞 Css 
-    🦐 Tailwind ​​
-    🌊 Webpack
-    🫧 Vercel
-    💧 Figma
+`🪼 React`
+`🦭 Next`
+`🦞 Css`
+`🦐 Tailwind ​`
+`🌊 Webpack`
+`🫧 Vercel`
+`💧 Figma`
 
 ## ​🐚​ Despliegue
 Para desplegar se utilizó `Vercel`.
